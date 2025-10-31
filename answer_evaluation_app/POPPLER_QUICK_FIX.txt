@@ -1,0 +1,77 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                      POPPLER ERROR - QUICK FIX                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+ERROR YOU'RE SEEING:
+--------------------
+❌ PDFInfoNotInstalledError: Unable to get page count. 
+   Is poppler installed and in PATH?
+
+WHAT THIS MEANS:
+----------------
+Your app needs Poppler to convert PDF files to images for OCR processing.
+Poppler is NOT installed or not accessible in your system PATH.
+
+QUICK SOLUTION (Choose ONE method):
+------------------------------------
+
+📌 METHOD 1: AUTOMATED (EASIEST - RECOMMENDED)
+   1. Run: fix_poppler.bat
+   2. Choose option 1 (Automatic Installation)
+   3. Wait for installation to complete
+   4. CLOSE your terminal completely
+   5. Open NEW terminal
+   6. Run: check_poppler.bat  (to verify)
+   7. Run: python app.py
+
+📌 METHOD 2: WINGET (Windows 11/Updated Windows 10)
+   1. Run: install_poppler_winget.bat
+   2. Wait for installation
+   3. CLOSE and reopen terminal
+   4. Run: check_poppler.bat
+   5. Run: python app.py
+
+📌 METHOD 3: MANUAL DOWNLOAD
+   1. Visit: https://github.com/oschwartz10612/poppler-windows/releases/
+   2. Download latest Release-XX.XX.X-X.zip
+   3. Extract to C:\poppler
+   4. Add C:\poppler\Library\bin to system PATH:
+      - Right-click 'This PC' → Properties
+      - Advanced system settings → Environment Variables
+      - Edit 'Path' under User variables
+      - Add new entry: C:\poppler\Library\bin
+   5. Click OK, OK, OK
+   6. CLOSE and reopen terminal
+   7. Run: check_poppler.bat
+   8. Run: python app.py
+
+VERIFICATION:
+-------------
+After installation, run this in terminal:
+   pdfinfo -v
+
+You should see Poppler version info (NOT an error).
+
+IMPORTANT NOTES:
+----------------
+⚠️ You MUST completely close and reopen your terminal after installation
+⚠️ Simply closing and reopening is not enough - PATH changes need fresh shell
+⚠️ On some systems, you may need to log out and log back in
+
+STILL NOT WORKING?
+------------------
+1. Verify Poppler is installed:
+   dir C:\poppler /s /b | findstr bin
+
+2. Check your PATH contains the bin folder:
+   echo %PATH%
+
+3. Make sure you restarted terminal AFTER adding to PATH
+
+4. Try running as administrator
+
+5. Check detailed guide: POPPLER_FIX.md
+
+NEED MORE HELP?
+---------------
+See full documentation in: POPPLER_FIX.md

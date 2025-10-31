@@ -1,0 +1,64 @@
+====================================
+QUICK FIX FOR YOUR OCR ISSUE
+====================================
+
+PROBLEM:
+Your app shows "Found 0 questions" and "Found 0 answers" because 
+the 'addict' package is missing.
+
+SOLUTION (Pick One):
+------------------------------------
+
+EASIEST WAY:
+1. Double-click: install_missing_deps.bat
+2. Wait for it to finish
+3. Restart your app with: start.bat
+4. Re-upload your PDFs
+
+OR MANUAL WAY:
+1. Open Command Prompt
+2. Type: pip install addict timm einops
+3. Press Enter and wait
+4. Restart your app with: python app.py
+5. Re-upload your PDFs
+
+====================================
+WHAT WAS FIXED:
+====================================
+
+I've added these packages to requirements.txt:
+- addict (main fix for your error)
+- timm (vision model support)
+- einops (tensor operations)
+
+====================================
+AFTER FIXING:
+====================================
+
+You should see in console:
+✅ DeepSeek-OCR initialized successfully
+✅ Extracted N questions from question paper
+✅ Extracted N answers from answer key
+
+Instead of:
+❌ Error initializing DeepSeek-OCR
+❌ Found 0 questions
+❌ Found 0 answers
+
+====================================
+FILES CREATED/UPDATED:
+====================================
+
+✅ requirements.txt - Updated with missing packages
+✅ install_missing_deps.bat - Easy installer
+✅ FIX_ADDICT_ERROR.md - Detailed guide
+✅ QUICK_FIX.txt - This file
+
+====================================
+NEED MORE HELP?
+====================================
+
+Read: FIX_ADDICT_ERROR.md for detailed instructions
+Run: python auto_diagnose.py to check everything
+
+====================================

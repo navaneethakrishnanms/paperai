@@ -116,5 +116,5 @@ def evaluate_paper(image_path: str):
 
 
 if __name__ == "__main__":
-    image_to_evaluate = "math12.jpeg"
+    image_to_evaluate = "im.jpeg"
     evaluate_paper(image_to_evaluate)

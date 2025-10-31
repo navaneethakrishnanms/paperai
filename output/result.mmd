@@ -1,11 +1,26 @@
 
-Attention \((q, k, v) = \text{softmax} \left( \frac{qk^T}{\sqrt{d_k}} \right) v,\) 
+(ii) A food delivery robot uses GPS + IMU + cameras to update its position while navigating streets. If it relies only on GPS, localization is inaccurate in tunnels.
 
 
-\[x_1 \cdot x_2 = \sum_{i=0}^{d_{\text{model}}} x_{1i} x_{2i} = |x_1||x_2|\cos\theta\]
+Identify the approach improves navigation accuracy.
 
 
-\[\mathcal{T}(\theta) = \frac{1}{T} \sum_{t=1}^{T} \mathcal{J}^{(t)}(\theta)\]
+a) Dead reckoning only
 
 
-\[m(Q_i, k) = \ln \sum_{j=1}^{L_k} e^{\frac{Q_i k^T}{\sqrt{d}}} - \frac{1}{L_k} \sum_{j=1}^{L_k} \frac{Q_i k_j}{\sqrt{d}}\]
+b) Sensor fusion for localization
+
+
+c) Ignoring localization and using fixed routes
+
+
+d) Using a single camera feed
+
+
+(1 Mark - [U/C, 2])
+
+
+(iii) An indoor drone explores an office floor without GPS support. Instead of assuming a single fixed position, it maintains a probability distribution of its possible locations. With each movement, uncertainty increases,but sensor inputs like wall distances and camera readings refine its belief about where it is.
+
+
+From the above scenario, Predict how a belief representation helps the drone improve localization. Give three specific benefits.
